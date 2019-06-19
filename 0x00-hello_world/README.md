@@ -1,0 +1,1 @@
+Beggining with the basics in C
