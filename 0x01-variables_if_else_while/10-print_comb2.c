@@ -6,24 +6,24 @@
  */
 int main(void)
 {
-  int hexone = 48;
-  int hextwo = 48;
-  while (hexone <= 57 && hextwo <= 57)
-    {
-      putchar(hexone);
-      putchar(hextwo);
-      if (hexone != 57 || hextwo != 57)
-        {
-	  putchar(44);
-	  putchar(32);
-        }
-      hextwo++;
-      if (hextwo == 58 && hexone != 57)
-        {
-	  hextwo = 48;
-	  hexone++;
-        }
-    }
-  putchar('\n');
-  return (0);
+int hexone = 48;
+int hextwo = 48;
+while (hexone <= 57 && hextwo <= 57)
+{
+putchar(hexone);
+putchar(hextwo);
+if (hexone != 57 || hextwo != 57)
+{
+putchar(44);
+putchar(32);
+}
+hextwo++;
+if (hextwo == 58 && hexone != 57)
+{
+hextwo = 48;
+hexone++;
+}
+}
+putchar('\n');
+return (0);
 }
