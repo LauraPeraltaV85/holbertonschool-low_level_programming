@@ -1,27 +1,27 @@
 #include <stdio.h>
 /**
  * main - entry point
- * Descripion: prints base10 numbers the 00 and 99 with space and commas
+ * 
  * Return: 0
  */
 int main(void)
 {
-int hexone = 48;
-int hextwo = 48;
-while (hexone <= 57 && hextwo <= 57)
+int num1 = 48;
+int num2 = 48;
+while (num1 <= 57 && num2 <= 57)
 {
-putchar(hexone);
-putchar(hextwo);
-if (hexone != 57 || hextwo != 57)
+putchar(num1);
+putchar(num2);
+if (num1 != 57 || num2 != 57)
 {
 putchar(44);
 putchar(32);
 }
-hextwo++;
-if (hextwo == 58 && hexone != 57)
+num2++;
+if (num2 == 58 && num1 != 57)
 {
-hextwo = 48;
-hexone++;
+num2 = 48;
+num1++;
 }
 }
 putchar('\n');
