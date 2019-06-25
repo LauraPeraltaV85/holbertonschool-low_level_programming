@@ -31,10 +31,11 @@ else
 {
 _putchar(y + '0');
 }
-
+if (v != 9)
+{
 _putchar(44);
 _putchar(32);
-
+}
 v++;
 }
 _putchar('\n');
