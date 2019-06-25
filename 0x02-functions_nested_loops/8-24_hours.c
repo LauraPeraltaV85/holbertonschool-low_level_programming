@@ -13,20 +13,25 @@ int p;
 
 for (m = 48; m <= 50; m++)
 {
-_putchar(m);
-for (n = 48; n <= 51; n++)
+for (n = 48; n <= 57; n++)
 {
-_putchar(n);
-_putchar(58);
 for (o = 48; o <= 53; o++)
 {
-_putchar(o);
 for (p = 48; p <= 57; p++)
 {
-_putchar(p);
+if (!(m == 50 && n > 51)) 
+{
+
+ _putchar(m);
+ _putchar(n);
+ _putchar(58);
+ _putchar(o);
+ _putchar(p);
+ _putchar('\n');
+
 }
 }
 }
 }
-_putchar('\n');
+}
 }
