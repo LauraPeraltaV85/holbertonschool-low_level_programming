@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- *print_last_digit - prints last digit
+ *print_last_digit - prints last digit of a number
  *@n: sample number
- *Return 0
+ *Return: 0
  */
 int print_last_digit(int n)
 {
@@ -21,5 +21,5 @@ else
 _putchar(ld + '0');
 return (ld);
 }
-
+return (0);
 }
