@@ -19,15 +19,15 @@ for (o = 48; o <= 53; o++)
 {
 for (p = 48; p <= 57; p++)
 {
-if (!(m == 50 && n > 51)) 
+if (!(m == 50 && n > 51))
 {
 
- _putchar(m);
- _putchar(n);
- _putchar(58);
- _putchar(o);
- _putchar(p);
- _putchar('\n');
+_putchar(m);
+_putchar(n);
+_putchar(58);
+_putchar(o);
+_putchar(p);
+_putchar('\n');
 
 }
 }
