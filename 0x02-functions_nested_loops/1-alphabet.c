@@ -2,8 +2,10 @@
 #include <unistd.h>
 
 /**
- * print_alphabet print alphabet
+ * print_alphabet - print alphabet
+ *
  * Print alphabet in lowercase
+ *
  * Return: 0
  */
 void print_alphabet(void)
