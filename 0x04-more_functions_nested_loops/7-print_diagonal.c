@@ -22,10 +22,11 @@ _putchar(92);
 _putchar('\n');
 k++;
 n--;
-}
+
 if (n <= 0)
 {
 _putchar('\n');
+}
 }
 }
 
