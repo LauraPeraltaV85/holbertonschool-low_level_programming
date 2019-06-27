@@ -28,7 +28,7 @@ printf("%d", tf);
 putchar(' ');
 }
 }
-putchar('\n');
+printf("\n");
 
 return (0);
 }
