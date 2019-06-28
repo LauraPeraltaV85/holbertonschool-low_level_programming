@@ -28,6 +28,5 @@ printf("%d ", tf);
 }
 }
 putchar('\n');
-
 return (0);
 }
