@@ -8,16 +8,16 @@
 void print_triangle(int size)
 {
 int f, c;
- 
+
 for (f = 1; f <= size; f++)
 {
 for (c = 1; c <= size; c++)
 {
-if(c <= size - f)	  
-{             
+if (c <= size - f)
+{
 _putchar(32);
 }
-else 
+else
 {
 _putchar(35);
 }
