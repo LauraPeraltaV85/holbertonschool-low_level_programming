@@ -12,21 +12,26 @@ for (tf = 1; tf <= 100; tf++)
 {
 if ((tf % 3 == 0) && (tf % 5 == 0))
 {
-printf("FizzBuzz ");
+printf("FizzBuzz");
 }
 else if (tf % 3 == 0)
 {
-printf("Fizz ");
+printf("Fizz");
 }
 else if (tf % 5 == 0)
 {
-printf("Buzz ");
+printf("Buzz");
 }
 else
 {
-printf("%d ", tf);
+printf("%d", tf);
+}
+if (tf != 100)
+{
+putchar(32);
 }
 }
 putchar('\n');
+
 return (0);
 }
