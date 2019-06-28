@@ -24,11 +24,10 @@ printf("Buzz ");
 }
 else
 {
-printf("%d", tf);
-putchar(' ');
+printf("%d ", tf);
 }
 }
-printf("\n");
+putchar('\n');
 
 return (0);
 }
