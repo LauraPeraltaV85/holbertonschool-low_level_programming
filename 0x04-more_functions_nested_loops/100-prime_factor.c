@@ -10,7 +10,7 @@ long int p;
 long int t;
 
 t = 612852475143;
-p = 2;  
+p = 2;
 while (p <= t)
 {
 if (t % p == 0)
