@@ -1,0 +1,15 @@
+#include "holberton.h"
+
+/**
+ *rev_string - reverses string
+ *@s: string pointer
+ *Return: 0
+ */
+void rev_string(char *s)
+{
+  int c, e;
+  char *s_ptr, *f_ptr, ch;
+
+  for (
+
+}
