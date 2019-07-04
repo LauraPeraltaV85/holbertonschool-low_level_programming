@@ -7,16 +7,14 @@
  */
 char *string_toupper(char *u)
 {
-  int t;  
+int t;
 
-  for (t = 0; u[t] != '\0'; t++)
-    {
-      if (u[t] > 96 && u[t] < 123)
-	{
-	  u[t] = u[t] - 32;
-	}
-    }
-  return (u);
-
-
+for (t = 0; u[t] != '\0'; t++)
+{
+if (u[t] > 96 && u[t] < 123)
+{
+u[t] = u[t] - 32;
+}
+}
+return (u);
 }
