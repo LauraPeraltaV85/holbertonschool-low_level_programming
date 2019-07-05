@@ -7,21 +7,23 @@
  */
 char *rot13(char *str)
 {
-  int g;
-  char org[52] = {"NOPQRSTUVWXYZABCDEFGHIJKLM"};
-  char new[52] = {"nopqrstuvwxyzabcdefghijklm"};
+int g, h, u;
 
-  g = 0;
-  while (str[g] != '\0')
-    {
-      if ((str[g] > 64 && str[g] < 91) || (str[g] > 94 && str[g] < 123))
-	    {
-	      str[g] = (str[g] - 65 > 25) ?
-		new[str[g] - 97] : org[str[g] - 65];
-	    }
-      g++;
-	}
-   
-  return (str); 
+char alpha[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
+u = 52;
+for (g = 0; str[g] != '\0'; g++)
+{
+h = 0;
+while (h < u)
+{
+if (alpha[h] == str[g])
+{
+str[g] = alpha[(h + 13) % 26 + (h / 26) * 26];
+h = u;
+}
+h++;
+}
+}
+return (str);
 }
