@@ -16,6 +16,6 @@ if (s[l] == c)
 break;
 }
 if (s[l] == c)
-return (s +l);
+return (s + l);
 return (0);
 }
