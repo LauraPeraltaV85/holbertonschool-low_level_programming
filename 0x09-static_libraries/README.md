@@ -1,0 +1,1 @@
+What is  a Static Library and how to use it
