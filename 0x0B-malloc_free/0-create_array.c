@@ -18,7 +18,10 @@ return (NULL);
 
 str = malloc(size * sizeof(str));
 if (str == NULL)
-return (NULL);
+{
+	free(str);
+	return (NULL);
+}
 
 for (n = 0; n < size; n++)
 str[n] = c;
