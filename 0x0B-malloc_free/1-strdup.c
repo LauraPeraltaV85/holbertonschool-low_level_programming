@@ -46,8 +46,14 @@ char *_strcpy(char *dest, char *src)
  */
 char *_strdup(char *str)
 {
+	char *cop;
 
-	char *cop = malloc(_strlen(str) + 1);
+	if (str == NULL)
+	{
+		return (NULL);
+	}
+
+	cop = malloc(_strlen(str) + 1);
 
 	if (cop == NULL)
 	{
