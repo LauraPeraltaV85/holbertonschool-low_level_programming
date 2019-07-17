@@ -35,8 +35,8 @@ int **alloc_grid(int width, int height)
 					return (NULL);
 			}
 	}
-	for (c = 0; c < height; c++)	
-	{	
+	for (c = 0; c < height; c++)
+	{
 		for (d = 0; d < width; d++)
 			matrix[c][d] = 0;
 	}
