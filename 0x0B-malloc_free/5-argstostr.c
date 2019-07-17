@@ -10,6 +10,7 @@
 int _strlen(char *s)
 {
 	int count;
+
 	count = 0;
 	while (s[count] != '\0')
 		count++;
@@ -41,6 +42,7 @@ char *argstostr(int ac, char **av)
 		c++;
 	}
 	array = malloc((len + ac) * sizeof(char) + 1);
+
 	if (array == 0)
 		return (NULL);
 	for (c = 0; c < ac; c++)
@@ -56,4 +58,4 @@ char *argstostr(int ac, char **av)
 	array[g] = '\0';
 	return (array);
 
-} 
+}
