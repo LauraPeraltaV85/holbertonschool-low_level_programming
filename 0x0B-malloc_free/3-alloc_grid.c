@@ -29,7 +29,7 @@ int **alloc_grid(int width, int height)
 			{
 				return (NULL);
 
-				for (; c >= 0; c++)
+				for (; c >= 0; c--)
 				{
 					free(matrix[c]);
 					free(matrix);
