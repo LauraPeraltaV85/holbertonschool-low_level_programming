@@ -68,7 +68,6 @@ char *str_concat(char *s1, char *s2)
 		a[d] = s1[d];
 		d++;
 	}
-	a[d] = '\0';
 	_strcat(a, s2);
 
 	return (a);
