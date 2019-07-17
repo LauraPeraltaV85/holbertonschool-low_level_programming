@@ -6,7 +6,7 @@
  *alloc_grid - returns pointer to bidimensional array of ints
  *@width: number of columns
  *@height: number of rows
- *Return: NULL if fail, if height and width are 0 or negative NULL or pointer if success
+ *Return: NULL if fail, height, width are 0 or negative and pointer if success
  */
 int **alloc_grid(int width, int height)
 {
@@ -15,7 +15,7 @@ int **alloc_grid(int width, int height)
 	int c, d;
 
 	matrix = malloc(height * sizeof(*matrix));
-	
+
 	if (matrix == NULL)
 	{
 		return (NULL);
