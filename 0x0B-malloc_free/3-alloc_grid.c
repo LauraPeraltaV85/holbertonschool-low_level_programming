@@ -32,10 +32,10 @@ int **alloc_grid(int width, int height)
 				for (; c >= 0; c--)
 				{
 					free(matrix[c]);
+				}
 					free(matrix);
 					return (NULL);
-				}
-
+				
 			}
 
 		for (d = 0; d < width; d++)
