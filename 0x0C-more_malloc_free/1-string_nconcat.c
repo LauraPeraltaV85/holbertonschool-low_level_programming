@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
@@ -7,9 +6,9 @@
  *@s: string
  *Return: lenght of string
  */
-int _strlen(char *s)
+unsigned int _strlen(char *s)
 {
-	int count;
+	unsigned int count;
 
 	count = 0;
 	while (s[count] != '\0')
@@ -24,9 +23,9 @@ int _strlen(char *s)
  *@n: number of bytes
  *Return: dest
  */
-char *_strncat(char *dest, char *src, int n)
+char *_strncat(char *dest, char *src, unsigned int n)
 {
-	int destlen, srclen;
+	unsigned int destlen, srclen;
 
 	for (destlen = 0; dest[destlen] != '\0'; destlen++)
 		;
@@ -72,7 +71,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		return (NULL);
 	}
-	while (s1[a])
+	while (s1[a] != '\0')
 	{
 		w[a] = s1[a];
 		a++;
