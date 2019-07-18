@@ -41,8 +41,8 @@ char *_strncat(char *dest, char *src, int n)
  *string_nconcat - concatenates 2 strings
  *@s1: string number 1
  *@s2: string 2
- *@n:
- *Return: 
+ *@n: number of char to be printed from s2
+ *Return: NULL or pointer
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
@@ -63,7 +63,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (n >= d)
 	{
 		n = d;
-	} 
+	}
 
 	w = malloc((_strlen(s1)) + d + 1);
 
