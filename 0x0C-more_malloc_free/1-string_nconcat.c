@@ -1,0 +1,83 @@
+#include "holberton.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+/**
+ *_strlen - returns the length of a string
+ *@s: string
+ *Return: lenght of string
+ */
+int _strlen(char *s)
+{
+	int count;
+
+	count = 0;
+	while (s[count] != '\0')
+		count++;
+	return (count);
+}
+
+/**
+ *_strncat - concatenate two strings
+ *@dest: string 1
+ *@src: string 2
+ *@n: number of bytes
+ *Return: dest
+ */
+char *_strncat(char *dest, char *src, int n)
+{
+	int destlen, srclen;
+
+	for (destlen = 0; dest[destlen] != '\0'; destlen++)
+		;
+	for (srclen = 0; src[srclen] != '\0' && n > 0; srclen++, destlen++, n--)
+	{
+		dest[destlen] = src[srclen];
+	}
+	return (dest);
+}
+
+/**
+ *string_nconcat - concatenates 2 strings
+ *@s1: string number 1
+ *@s2: string 2
+ *@n:
+ *Return: 
+ */
+char *string_nconcat(char *s1, char *s2, unsigned int n)
+{
+	unsigned int a = 0, d;
+	char *w;
+
+	if (s1 == NULL)
+	{
+		s1 = "";
+	}
+	if (s2 == NULL)
+	{
+		s2 = "";
+	}
+
+	d = _strlen(s2);
+
+	if (n >= d)
+	{
+		n = d;
+	} 
+
+	w = malloc((_strlen(s1)) + d + 1);
+
+	if (w == NULL)
+	{
+		return (NULL);
+	}
+	while (s1[a])
+	{
+		w[a] = s1[a];
+		a++;
+	}
+	_strncat(w, s2, n);
+
+	return (w);
+
+}
