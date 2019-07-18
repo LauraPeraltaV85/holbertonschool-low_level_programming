@@ -34,6 +34,7 @@ char *_strncat(char *dest, char *src, int n)
 	{
 		dest[destlen] = src[srclen];
 	}
+	dest[destlen] = '\0';
 	return (dest);
 }
 
@@ -65,7 +66,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		n = d;
 	}
 
-	w = malloc((_strlen(s1)) + d + 1);
+	w = malloc((_strlen(s1)) + n + 1);
 
 	if (w == NULL)
 	{
