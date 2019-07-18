@@ -8,33 +8,11 @@
  */
 unsigned int _strlen(char *s)
 {
-	unsigned int count;
+	unsigned int count = 0;
 
-	count = 0;
 	while (s[count] != '\0')
 		count++;
 	return (count);
-}
-
-/**
- *_strncat - concatenate two strings
- *@dest: string 1
- *@src: string 2
- *@n: number of bytes
- *Return: dest
- */
-char *_strncat(char *dest, char *src, unsigned int n)
-{
-	unsigned int destlen, srclen;
-
-	for (destlen = 0; dest[destlen] != '\0'; destlen++)
-		;
-	for (srclen = 0; n > 0; srclen++, destlen++, n--)
-	{
-		dest[destlen] = src[srclen];
-	}
-	dest[destlen] = '\0';
-	return (dest);
 }
 
 /**
@@ -46,7 +24,7 @@ char *_strncat(char *dest, char *src, unsigned int n)
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int a = 0, d;
+	unsigned int a = 0, d = 0, i = 0;
 	char *w;
 
 	if (s1 == NULL)
@@ -76,7 +54,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		w[a] = s1[a];
 		a++;
 	}
-	_strncat(w, s2, n);
+	for (; s2[i] != '\0'; i++, a++)
+	{
+		if (i == n)
+			break;
+		w[a] = s2[i];
+	}
+	w[a] = '\0';
 
 	return (w);
 
