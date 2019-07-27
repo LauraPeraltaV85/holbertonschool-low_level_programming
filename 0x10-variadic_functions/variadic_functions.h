@@ -15,6 +15,11 @@ void _i(va_list);
 void _f(va_list);
 void _s(va_list);
 
+/**
+ *struct FORM - pointer to function
+ *@k: pointer to array
+ *@fc: pointer function
+ */
 typedef struct FORM
 {
 	char *k;
