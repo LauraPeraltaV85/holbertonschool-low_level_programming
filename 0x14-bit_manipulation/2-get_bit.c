@@ -10,7 +10,7 @@ int get_bit(unsigned long int n, unsigned int index)
 {
 	unsigned long int stat;
 
-	if (n)
+	if (index < 63)
 	{
 		stat = (n >> index) & 1;
 		return (stat);
