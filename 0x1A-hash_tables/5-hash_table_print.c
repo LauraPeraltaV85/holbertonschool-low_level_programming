@@ -21,7 +21,10 @@ void hash_table_print(const hash_table_t *ht)
 				k = ht->array[idx]->key;
 				v = ht->array[idx]->value;
 				if (s == 0)
+				{
 					printf("'%s': '%s'", k, v);
+					s = 1;
+				}
 				else
 					printf(", '%s': '%s'", k, v);
 				tmp = ht->array[idx]->next;
