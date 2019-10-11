@@ -29,7 +29,10 @@ void hash_table_print(const hash_table_t *ht)
 					printf(", '%s': '%s'", k, v);
 				tmp = ht->array[idx]->next;
 				while (tmp != NULL)
+				{
 					printf(", '%s': '%s'", k, v);
+					tmp = tmp->next;
+				}
 			}
 		}
 		printf("}\n");
