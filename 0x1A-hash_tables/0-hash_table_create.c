@@ -9,7 +9,10 @@ hash_table_t *hash_table_create(unsigned long int size)
 {
 	hash_table_t *newhash;
 
-	newhash = malloc(sizeof(hash_table_t) * 1);
+	if (size <= 0)
+		return (NULL);
+
+	newhash = malloc(sizeof(hash_table_t));
 	if (newhash == NULL)
 		return (NULL);
 
