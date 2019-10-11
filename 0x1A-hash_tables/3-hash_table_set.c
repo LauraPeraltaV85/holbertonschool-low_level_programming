@@ -5,7 +5,7 @@
  *@ht: hash table you want to update
  *@key: key
  *@value: is the value associated with the key
- *return: 1 if succeeded 0 otherwise
+ *Return: 1 if succeeded 0 otherwise
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
@@ -25,9 +25,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		if (strcmp(tmp->key, key) == 0)
 		{
-		    free(tmp->value);
-		    tmp->value = strdup(value);
-		    return (1);
+			free(tmp->value);
+			tmp->value = strdup(value);
+			return (1);
 		}
 		tmp = tmp->next;
 	}
