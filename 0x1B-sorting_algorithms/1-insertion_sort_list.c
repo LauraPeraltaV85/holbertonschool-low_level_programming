@@ -1,71 +1,48 @@
 #include "sort.h"
-
 /**
- *swap_node - swaps node in list
- *@left: left node
- *@right: right node
- *Return: pointer to list
+ * selection_sort - sorte's an array based on selection algthm
+ * @array: the array we are iterating through
+ * @size: the size of the array
+ *
+ * Return: none it is void
  */
-listint_t *swap_node(listint_t *left, listint_t *right)
+
+void selection_sort(int *array, size_t size)
 {
-	listint_t *head;
+	int lenght = size - 1;
+	int s_position = 0;
+	int f_position = 0;
+	int tmp = 0;
+	unsigned int i = 0;
+	int flag = 0;
+	int minimun = 0;
 
-	if (left->prev)
-		left->prev->next = right;
-	else
-		head = right;
-
-	if (right->next)
-		right->next->prev = left;
-
-	left->next = rigth->next;
-	right->prev = left->prev;
-	right->next = left;
-	left->prev = right;
-	return (*head);
-}
-
-/**
- *listint_len - counts list len
- *@h: list
- *Return: list len
- */
-size_t listint_len(const listint_t *h)
-{
-	int count = 0;
-
-	while (h)
-	{
-		h = h->next;
-		count++;
-	}
-	return (count);
-}
-
-/**
- *insertion_sort_list - sorts list
- *@list: list to be sorted
- */
-void insertion_sort_list(listint_t **list)
-{
-	listint_t *tmp, *sort = NULL;
-	int lenght = listint_len(*list);
-
-	if (!list || !list->next)
+	if (size < 2)
 		return;
-
-	tmp = *list;
-	while (tmp != NULL)
+	while (lenght)
 	{
+		i = s_position;
+		minimun = array[s_position];
 
-		while ();
+		while (i < size)
 		{
-			if(!(tmp->prev == NULL || tmp->prev->n < tmp->n))
+			if (array[i] < minimun)
 			{
-				swap_node(tmp->prev, tmp);
-				print_list(*list);
-				sort = tmp-
+				minimun = array[i];
+				f_position = i;
+				flag = 1;
 			}
-			tmp = tmp->next;
+			++i;
 		}
+		if (flag)
+		{
+			tmp = array[s_position];
+			array[s_position] = minimun;
+			array[f_position] = tmp;
+			print_array(array, size);
+			flag = 0;
+		}
+		lenght--;
+		s_position++;
+	}
 }
