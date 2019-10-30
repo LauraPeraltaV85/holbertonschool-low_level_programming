@@ -20,7 +20,7 @@ void filling_array(int *array, int *new_array, int k)
 				array[s_position] = j;
 				last_n = new_array[j];
 				s_position++;
-				x--;
+				coincidences--;
 			}
 		}
 	}
