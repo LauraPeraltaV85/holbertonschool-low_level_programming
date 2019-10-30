@@ -1,48 +1,43 @@
 #include "sort.h"
 /**
- * selection_sort - sorte's an array based on selection algthm
- * @array: the array we are iterating through
- * @size: the size of the array
- *
- * Return: none it is void
+ * insertion_sort_list - sorting a double linked list with insertion
+ * @list: double linked list
  */
-
-void selection_sort(int *array, size_t size)
+void insertion_sort_list(listint_t **list)
 {
-	int lenght = size - 1;
-	int s_position = 0;
-	int f_position = 0;
-	int tmp = 0;
-	unsigned int i = 0;
-	int flag = 0;
-	int minimun = 0;
+	listint_t *element = NULL;
+	listint_t *tmp = NULL;
+	listint_t *head = NULL;
 
-	if (size < 2)
+	if (!list || !(*list) || !(*list)->next)
 		return;
-	while (lenght)
-	{
-		i = s_position;
-		minimun = array[s_position];
 
-		while (i < size)
+	head = *list;
+	while (head)
+	{
+		element = head;
+		while (element->prev && element != NULL)
 		{
-			if (array[i] < minimun)
+			tmp = element->prev;
+			if (tmp->n > element->n)
 			{
-				minimun = array[i];
-				f_position = i;
-				flag = 1;
+				if (tmp->prev)
+					(tmp->prev)->next = element;
+				element->prev = tmp->prev;
+				tmp->next = element->next;
+				tmp->prev = element;
+				element->next = tmp;
+				if (tmp->next)
+					(tmp->next)->prev = tmp;
+				if (!element->prev)
+					*list = element;
+				print_list(*list);
 			}
-			++i;
+			else
+				element = element->next;
+			if (!element)
+				return;
 		}
-		if (flag)
-		{
-			tmp = array[s_position];
-			array[s_position] = minimun;
-			array[f_position] = tmp;
-			print_array(array, size);
-			flag = 0;
-		}
-		lenght--;
-		s_position++;
+		head = head->next;
 	}
 }
